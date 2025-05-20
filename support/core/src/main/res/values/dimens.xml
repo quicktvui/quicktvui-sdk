@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="es_seek_thumb_oval_size">11dp</dimen>
+    <dimen name="es_seek_thumb_center_size">8dp</dimen>
+    <dimen name="es_seek_thumb_rsb_size">1dp</dimen>
+    <dimen name="es_seek_thumb_margin">4.5dp</dimen>
+    <dimen name="es_seek_thumb_normal_margin">6dp</dimen>
+    <dimen name="es_seek_thumb_normal_bg">25dp</dimen>
+</resources>

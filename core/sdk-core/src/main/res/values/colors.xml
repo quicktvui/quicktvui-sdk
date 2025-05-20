@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_es_default_bg">#171B35</color>
+    <color name="color_es_default_black_bg">#000000</color>
+
+    <color name="eskit_color_black_50">#80000000</color>
+    <color name="eskit_color_white_10">#1EFFFFFF</color>
+    <color name="eskit_color_white_50">#80FFFFFF</color>
+    <color name="eskit_color_gray">#2F3541</color>
+    <color name="eskit_color_red_badge">#F00C0C</color>
+    <color name="eskit_progress_text_50">#80FEFFFF</color>
+    <color name="eskit_rpk_update_dialog_title">#FFFFFF</color>
+    <color name="eskit_rpk_update_slogan">#59FFFFFF</color>
+    <color name="eskit_rpk_update_content">#B3FFFFFF</color>
+</resources>

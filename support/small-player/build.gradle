@@ -1,0 +1,41 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.kezong.fat-aar'
+
+android {
+    compileSdk sdk_compileSdk
+
+    defaultConfig {
+        minSdk sdk_minSdk
+        targetSdk sdk_targetSdk
+
+        consumerProguardFiles "consumer-rules.pro"
+
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation libs.android.recyclerview
+    compileOnly libs.utils
+    implementation findHippyDependencies()
+    compileOnly project(path: ':base:sdk-base')
+    compileOnly project(path: ':base:ui')
+    compileOnly project(path: ':support:player-ijk')
+    compileOnly project(path: ':support:player-manager')
+
+    //annotation processor 模块
+    compileOnly project(path: ':plugin:annotations')
+    annotationProcessor project(path: ':plugin:compiler')
+}

@@ -1,0 +1,1 @@
+package com.quicktvui.sample.test_reg;import android.content.Context;import android.os.Bundle;import com.quicktvui.sdk.annotations.ESKitAutoInit;import com.quicktvui.sdk.base.IEsAutoInit;/** * <br> * * <br> */@ESKitAutoInitpublic class TestALastpolloInit implements IEsAutoInit {    @Override    public void init(Context context, Bundle params) {    }}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ESCardView">
+        <attr name="usePlaceHolder" format="boolean" />
+        <attr name="useDefaultUI" format="boolean" />
+        <attr name="useCache" format="boolean" />
+        <!--        &lt;!&ndash; Corner radius for CardView. &ndash;&gt;-->
+        <!--        <attr format="dimension" name="cardCornerRadius"/>-->
+        <!--        &lt;!&ndash; Elevation for CardView. &ndash;&gt;-->
+        <!--        <attr format="dimension" name="cardElevation"/>-->
+        <!--        &lt;!&ndash; Maximum Elevation for CardView. &ndash;&gt;-->
+        <!--        <attr format="dimension" name="cardMaxElevation"/>-->
+        <attr name="cardId" format="string" />
+        <attr name="autoLoad" format="boolean" />
+        <!-- Inner padding between the edges of the Card and children of the CardView. -->
+        <attr name="contentPadding" format="dimension" />
+        <!-- Inner padding between the left edge of the Card and children of the CardView. -->
+        <attr name="contentPaddingLeft" format="dimension" />
+        <!-- Inner padding between the right edge of the Card and children of the CardView. -->
+        <attr name="contentPaddingRight" format="dimension" />
+        <!-- Inner padding between the top edge of the Card and children of the CardView. -->
+        <attr name="contentPaddingTop" format="dimension" />
+        <!-- Inner padding between the bottom edge of the Card and children of the CardView. -->
+        <attr name="contentPaddingBottom" format="dimension" />
+    </declare-styleable>
+
+</resources>

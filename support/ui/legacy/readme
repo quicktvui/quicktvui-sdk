@@ -1,0 +1,9 @@
+@TODO 注意此模块后续将重构
+关于fabseui的说明：
+
+1 ：fbase库为适合TV开发的ui库，所有类都以F开头，例如FView,FRelativeLayout.
+2 ：Android常用的View理论都应该使用继承的FxxView，否则框架内有些功能无法正常使用（例如选中 这放大功能），例如当想使用ImageView时，对应应当使用FImageView。
+3 :  特殊情况下，无法使用继承的FxxView（例如使用第三方控件库）,需要使其实现FView接口。
+4 ：Activity，Dialog等根布局一定要是FRootView.
+5 : com.bftv.fui.baseui.view及tvkit.baseui.widget下的公开类都已F开头（接口使用IF,抽象使用AbsF）。widget下的ext是在view和widget的基础上开发的
+应用于各个项目的组件库，与FUI2.0风格有紧密联系。日后Fui3.0可能不再采用此包的内容。

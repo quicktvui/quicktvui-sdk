@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeItemRootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:clipChildren="false">
+<!--    不规则阴影-->
+    <ImageView
+        android:id="@+id/homeItemShadowIrregularImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"/>
+<!--    规则阴影-->
+    <ImageView
+        android:id="@+id/homeItemShadowImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:layout_marginLeft="-48dp"
+        android:layout_marginRight="-48dp"
+        android:layout_marginTop="-48dp"
+        android:layout_marginBottom="-60dp"/>
+<!--    背景图-->
+    <ImageView android:id="@+id/homeItemBgImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="1.5dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/home_place_bg"/>
+<!--    边框-->
+    <ImageView
+        android:id="@+id/homeItemBorderImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"/>
+<!--    角标-->
+    <TextView
+        android:id="@+id/homeItemCorner"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_margin="1.6dp"
+        android:textSize="12dp"
+        android:textColor="@android:color/white"
+        android:includeFontPadding="false"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:visibility="invisible"
+        android:gravity="center_vertical"
+        android:background="@drawable/home_item_corner_bg"
+        android:layout_gravity="right|top"
+        tools:ignore="SmallSp" />
+
+</FrameLayout>

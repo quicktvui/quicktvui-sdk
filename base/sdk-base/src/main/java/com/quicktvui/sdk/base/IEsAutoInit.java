@@ -1,0 +1,1 @@
+package com.quicktvui.sdk.base;import android.content.Context;import android.os.Bundle;/** * <br> * * <br> */public interface IEsAutoInit {    void init(Context context, Bundle params);}

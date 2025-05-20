@@ -1,0 +1,14 @@
+package com.quicktvui.support.record.core;
+
+/**
+ * 状态
+ */
+public enum AudioRecorderStatusEnum {
+    AUDIO_RECORDER_STATUS_NOT_INIT,
+    AUDIO_RECORDER_STATUS_READY,
+    AUDIO_RECORDER_STATUS_START,
+    AUDIO_RECORDER_STATUS_STOP,
+    AUDIO_RECORDER_STATUS_CANCEL,
+    AUDIO_RECORDER_STATUS_SUCCESS,
+    AUDIO_RECORDER_STATUS_ERROR,
+}

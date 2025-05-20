@@ -1,0 +1,33 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+//apply from:"${tvkit_gradle_scripts_path}"+'build_publish_lib.gradle'
+android {
+    compileSdk sdk_compileSdk
+
+    defaultConfig {
+        minSdk sdk_minSdk
+        targetSdk sdk_targetSdk
+        consumerProguardFiles "consumer-rules.pro"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+
+dependencies {
+    compileOnly project(path: ':base:ui')
+    compileOnly project(path: ':support:ui:leanback')
+    compileOnly project(path: ':support:ui:recyclerview')
+    implementation libs.android.recyclerview
+    implementation libs.android.appcompat
+}
+

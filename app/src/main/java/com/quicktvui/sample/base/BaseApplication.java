@@ -1,0 +1,1 @@
+package com.quicktvui.sample.base;import android.support.multidex.MultiDexApplication;/** * <br> * * <br> */public class BaseApplication extends MultiDexApplication {}

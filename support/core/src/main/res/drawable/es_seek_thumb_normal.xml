@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/es_seek_thumb_normal_bg_red" />
+    <item
+        android:bottom="@dimen/es_seek_thumb_normal_margin"
+        android:drawable="@drawable/es_seek_thumb_normal_center"
+        android:left="@dimen/es_seek_thumb_normal_margin"
+        android:right="@dimen/es_seek_thumb_normal_margin"
+        android:top="@dimen/es_seek_thumb_normal_margin" />
+</layer-list>

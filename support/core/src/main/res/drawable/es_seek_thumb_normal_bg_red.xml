@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval"
+    android:useLevel="true">
+
+    <size
+        android:width="@dimen/es_seek_thumb_normal_bg"
+        android:height="@dimen/es_seek_thumb_normal_bg" />
+
+    <!-- centerX, centerY是百分百（0-1） -->
+    <gradient
+        android:centerX="0.5"
+        android:centerY="0.5"
+        android:startColor="#33FF4E46"
+        android:endColor="#33FF4E46"
+        android:gradientRadius="20"
+        android:type="radial" />
+</shape>

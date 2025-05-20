@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="text_color_light_gray">#939393</color>
+    <!--字体颜色-->
+    <color name="text_color_def">#5E5E5E</color>
+    <color name="color_f7b500">#F7B500</color>
+    <color name="color_fa7300">#FA7300</color>
+    <color name="color_000000">#000000</color>
+    <color name="color_white">#FFFFFF</color> <!--焦点线颜色-->
+
+</resources>

@@ -1,0 +1,28 @@
+apply plugin: 'com.android.library'
+
+
+android {
+    compileSdk sdk_compileSdk
+
+    defaultConfig {
+        minSdk sdk_minSdk
+        targetSdk sdk_targetSdk
+        consumerProguardFiles "consumer-rules.pro"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+
+
+
+dependencies {
+//    implementation libs.android.appcompat
+    implementation libs.android.recyclerview
+    compileOnly project(path: ':support:ui:recyclerview')
+}

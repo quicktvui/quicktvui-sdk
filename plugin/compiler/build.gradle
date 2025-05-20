@@ -1,0 +1,26 @@
+apply plugin: 'java'
+
+dependencies {
+//    implementation gradleApi()
+//    implementation localGroovy()
+//    implementation 'com.android.tools.build:gradle:3.6.1'
+//    implementation 'org.ow2.asm:asm:5.0.3'
+//    implementation 'org.ow2.asm:asm-commons:5.0.3'
+
+    compileOnly "com.google.auto.service:auto-service:1.0.1"
+    annotationProcessor "com.google.auto.service:auto-service:1.0.1"
+
+    implementation 'com.squareup:javapoet:1.13.0'
+    implementation 'org.aspectj:aspectjrt:1.9.6'
+
+    implementation project(path: ':plugin:annotations')
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}

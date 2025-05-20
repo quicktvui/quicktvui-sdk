@@ -1,0 +1,1 @@
+package com.quicktvui.sdk.annotations;import java.lang.annotation.ElementType;import java.lang.annotation.Retention;import java.lang.annotation.RetentionPolicy;import java.lang.annotation.Target;@Retention(RetentionPolicy.SOURCE)@Target(ElementType.TYPE)public @interface ESKitAutoInit {    // 优先级    int priority() default 0;}

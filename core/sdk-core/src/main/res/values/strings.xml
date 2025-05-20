@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--装载Fragment-->
+    <item name="es_subview_container" type="id" />
+    <item name="es_rooview_version_text" type="id" />
+
+    <!--JSViewRecord-->
+    <item name="es_js_view_tag1" type="id" />
+    <item name="es_js_view_tag2" type="id" />
+    <item name="es_js_view_tag3" type="id" />
+
+    <string name="es_app_loading">加载中...</string>
+    <string name="es_app_starting">加载中...</string>
+    <string name="es_app_uploading">%1$s 更新资源中...</string>
+    <string name="es_cover_tip_offline">网络不通，请检查电视网络</string>
+    <string name="es_cover_tip_load_too_long">加载时间过长，请检查网络是否正常</string>
+    <string name="es_cover_tip_load_server_err">无法连接至服务器，请尝试退出后再进入</string>
+    <string name="es_cover_tip_download_err">下载失败，请尝试退出后再进入</string>
+    <string name="es_cover_tip_debug_err">连接测调试服务失败</string>
+    <string name="es_cover_tip_start_err">启动失败，请尝试退出后再进入</string>
+    <string name="es_cover_tip_sdk_match_err">当前要求使用新版本应用，请到商店下载</string>
+    <string name="es_cover_tip_start_unknown">未知错误</string>
+
+    <string name="es_view_load_err">加载失败，请返回退出重新进入</string>
+
+
+    <string name="es_policy_dialog_title">温馨提示</string>
+    <string name="es_policy_dialog_desc">亲爱的用户, 在您使用欢视频前请阅读《###用户协议》\n和《###隐私政策》经过您同意后, 我们才能向您提供\n相关服务哦~</string>
+    <string name="es_policy_dialog_href1">《###用户协议》</string>
+    <string name="es_policy_dialog_href2">《###隐私政策》</string>
+    <string name="es_policy_dialog_btn_ok">同意</string>
+    <string name="es_policy_dialog_btn_cancel">不同意</string>
+</resources>

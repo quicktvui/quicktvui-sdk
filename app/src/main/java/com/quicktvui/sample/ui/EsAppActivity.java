@@ -1,0 +1,1 @@
+package com.quicktvui.sample.ui;import com.quicktvui.sdk.core.ui.BrowserStandardActivity;/** * <br> * * <br> */public class EsAppActivity extends BrowserStandardActivity {}

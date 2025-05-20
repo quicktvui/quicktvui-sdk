@@ -1,0 +1,12 @@
+<manifest package="com.quicktvui.support.ui.legacy"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        android:hardwareAccelerated="true"
+        >
+
+    </application>
+
+</manifest>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="placeholder">#1affffff</color>
+    <color name="main_bg">#0F0803</color>
+
+    <color name="main_bg_start_color">#2F3541</color>
+    <color name="main_bg_end_color">#252930</color>
+
+    <color name="main_btn_start_color">#F5F5F5</color>
+    <color name="main_btn_end_color">#F5F5F5</color>
+    <color name="main_text_color">#FF3823</color>
+
+    <color name="left_list_bg">#232528</color>
+    <color name="right_list_bg">#131F3C</color>
+
+    <color name="blacks">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_4">#0AFFFFFF</color>
+    <color name="white_5">#0DFFFFFF</color>
+    <color name="white_10">#1AFFFFFF</color>
+    <color name="white_15">#26FFFFFF</color>
+    <color name="white_30">#4DFFFFFF</color>
+    <color name="white_40">#66FFFFFF</color>
+    <color name="white_50">#80FFFFFF</color>
+    <color name="white_60">#99FFFFFF</color>
+    <color name="white_70">#B3FFFFFF</color>
+    <color name="white_80">#CCFFFFFF</color>
+    <color name="my_wifi_gray">#b3b3b3</color>
+    <color name="my_device_gray">#cccccc</color>
+    <color name="start_tips_color">#EFEFEE</color>
+    <color name="start_tips_textcolor">#BBBBBB</color>
+    <color name="quit_viewbg">#3A3936</color>
+    <color name="all_category_tag">#E31D28</color>
+    <color name="new_home_transparence">#00000000</color>
+    <color name="update_system_line">#5B5451</color>
+    <color name="update_system_button">#423838</color>
+    <color name="quit_button_color">#2F2F2F</color>
+    <color name="black_30">#4D000000</color>
+    <color name="black_50">#80000000</color>
+    <color name="black_60">#99000000</color>
+    <color name="black_70">#B3000000</color>
+    <color name="color_transparent">#00000000</color>
+    <color name="color_e1e1e1">#e1e1e1</color>
+    <color name="color_FFCE00">#FFCE00</color>
+    <color name="color_tab_item_normal">#88ffffff</color>
+    <color name="color_tab_item_focused">#ffffff</color>
+    <color name="color_B50A27">#B50A27</color>
+    <color name="color_pleasant_bg_start">#0C0F11</color>
+    <color name="color_pleasant_bg_end">#161B1F</color>
+    <color name="color_focus_textcolor">#061115</color>
+    <color name="color_E9CA94">#E9CA94</color>
+    <color name="color_tv_station_btn_unfocus">#1AFFFFFF</color>
+    <color name="color_program_item_tv_unfocus">#181715</color>
+    <color name="color_tv_station_btn_focus_startcolor">#ffffff</color>
+    <color name="color_tv_station_btn_focus_endcolor">#FFB555</color>
+    <color name="tv_station_tv_gray">#AA9D93</color>
+    <color name="program_list_start_color">#ff0e2a5f</color>
+    <color name="program_list_end_color">#ff000418</color>
+    <color name="color_mine_page_item_focus_bg2">#10757F93</color>
+    <color name="focus_text_bg_color">#F2F6FF</color>
+    <color name="color_10182C_75">#BF10182C</color>
+    <color name="color_C4132A">#C4132A</color>
+
+    <!--special color-->
+    <color name="auth_white">#ffffff</color>
+    <color name="color_9A000000">#9A000000</color>
+    <color name="translucent">#88000000</color>
+
+    <!--special color-->
+    <color name="white_20">#33FFFFFF</color>
+
+</resources>

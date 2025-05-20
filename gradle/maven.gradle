@@ -1,0 +1,101 @@
+def isJavaComponent = project.plugins.hasPlugin('java')
+apply plugin: 'maven-publish'
+apply plugin: 'signing'
+
+class RepositoryConfig {
+    String name
+    String urlRelease
+    String urlSnapshots
+    String username
+    String password
+}
+
+afterEvaluate {
+
+    //region 读取发布信息
+
+    def maven_props = readProperties("${project.projectDir}/maven.txt")
+    def GROUP_ID = maven_props.getProperty('GROUP_ID')
+    def ARTIFACT_ID = maven_props.getProperty('ARTIFACT_ID')
+    def VERSION = maven_props.getProperty('VERSION')
+
+
+    def local_props = readProperties("${project.rootDir}/local.properties")
+
+    def repoList = []
+
+    def mavenCentral = new RepositoryConfig()
+    mavenCentral.name = 'MavenCentral'
+    mavenCentral.urlRelease = local_props.getProperty('mavencentral.url.release')
+    mavenCentral.urlSnapshots = local_props.getProperty('mavencentral.url.snaspshots')
+    mavenCentral.username = local_props.getProperty('mavencentral.username')
+    mavenCentral.password = local_props.getProperty('mavencentral.password')
+    repoList.add(mavenCentral)
+
+    if (local_props.containsKey('nexus.url.release')) {
+        def mavenOfficial = new RepositoryConfig()
+        mavenOfficial.name = 'Nexus'
+        mavenOfficial.urlRelease = local_props.getProperty('nexus.url.release')
+        mavenOfficial.urlSnapshots = local_props.getProperty('nexus.url.snaspshots')
+        mavenOfficial.username = local_props.getProperty('nexus.username')
+        mavenOfficial.password = local_props.getProperty('nexus.password')
+        repoList.add(mavenOfficial)
+    }
+
+    //endregion
+
+    publishing {
+        repositories {
+            repoList.each { repo->
+                maven {
+                    name repo.name
+                    url VERSION.toLowerCase().endsWith('-snapshot') ? repo.urlSnapshots : repo.urlRelease
+                    credentials {
+                        username = repo.username
+                        password = repo.password
+                    }
+                }
+            }
+        }
+        publications {
+            maven(MavenPublication) {
+                if (isJavaComponent) {
+                    from components.java
+                } else {
+                    from components.debug
+                }
+                groupId = GROUP_ID
+                artifactId = ARTIFACT_ID
+                version = VERSION
+            }
+        }
+    }
+
+    signing {
+        sign publishing.publications.maven
+    }
+
+    tasks.findByName("publish").doLast {
+        if (!VERSION.toLowerCase().endsWith('snapshot')) {
+            addGitTag(GROUP_ID, ARTIFACT_ID, VERSION)
+        }
+    }
+
+    tasks.findByName("generatePomFileForMavenPublication").doLast {
+        def pomFile = it.outputs.files.first()
+        log("pom文件 ${pomFile}")
+    }
+
+    tasks.findAll { (it.name == 'publish' || it.name == 'publishToMavenLocal') }.each {
+        it.doLast {
+            log("发版完成 \nimplementation \'${GROUP_ID}:${ARTIFACT_ID}:${VERSION}\'")
+        }
+    }
+}
+
+def addGitTag(group, afId, ver) {
+    def tagName = "$group-$afId-$ver"
+
+    executeCmd("git tag $tagName")
+    executeCmd("git push --tags")
+}

@@ -1,0 +1,81 @@
+import org.apache.tools.ant.taskdefs.condition.Os
+
+buildscript {
+    dependencies {
+        classpath libs.fat.aar
+    }
+}
+
+plugins {
+    alias libs.plugins.android.application apply false
+    alias libs.plugins.android.library apply false
+    alias libs.plugins.kotlin.android apply false
+}
+
+ext {
+    sdk_compileSdk = 33
+    sdk_minSdk = 17
+    sdk_targetSdk = 29
+}
+
+///////////////////////////////////////////////////////////////
+
+static def log(msg) {
+    println("--> $msg")
+}
+
+static def readProperties(path) {
+    def f = new File(path)
+    if (!f.exists()) return null
+
+    Properties props = new Properties()
+    def ips = f.newDataInputStream()
+    props.load(ips)
+    ips.close()
+
+    return props
+}
+
+static def executeCmd(cmd, wait = true) {
+    def command
+    if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+        command = ['cmd', '/c', cmd] as String[]
+    } else {
+        command = ['bash', '-c', cmd] as String[]
+    }
+
+    def runtime = Runtime.getRuntime()
+    def p = runtime.exec(command)
+    if (wait) p.waitFor()
+    println '-------------------------------------------------'
+    println ">>>> $cmd"
+    if (p.exitValue() == 0) {
+        println p.text
+    } else {
+        println p.err
+    }
+}
+
+ext.findHippyDependencies = { ->
+    if (__is_debug_mode__.toBoolean()) {
+        return "com.quicktvui:hippy-tv-debug:${libs.versions.hippyVersion.get()}"
+    }
+    return "com.quicktvui:hippy-tv:${libs.versions.hippyVersion.get()}"
+}
+
+///////////////////////////////////////////////////////////////
+
+def startTasks = gradle.startParameter.getTaskNames().find { it.startsWith("publish") }
+def isPublishTask = startTasks != null && !startTasks.isEmpty()
+allprojects.each {
+    it.ext.set('__maven_mode__', isPublishTask)
+}
+
+subprojects.each {
+    if (new File(it.projectDir, "maven.txt").exists()) {
+        it.afterEvaluate {
+            println "--> ${it.name} apply maven"
+            it.apply from: "${rootProject.projectDir}/gradle/maven.gradle"
+        }
+    }
+}

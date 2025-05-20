@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="focus_blue" >#FF0079FF</color>
+    <color name="focus_red" >#FFfd485a</color>
+</resources>

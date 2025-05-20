@@ -1,0 +1,1 @@
+-keep class com.bumptech.glide.load.model.ModelLoader$LoadData {        com.bumptech.glide.load.data.DataFetcher fetcher;}-keep class com.bumptech.glide.load.data.HttpUrlFetcher {    com.bumptech.glide.load.data.HttpUrlFetcher$HttpUrlConnectionFactory connectionFactory;}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="bar_height_common">40dp</dimen>
+    <dimen name="index_number_text_size_common">18.7sp</dimen>
+    <dimen name="item_bar_corner">3dp</dimen>
+    <dimen name="actor_tag_text_size">16sp</dimen>
+    <dimen name="tip_margin_bottom">3dp</dimen>
+    <dimen name="frame_border_corner">0dp</dimen>
+</resources>

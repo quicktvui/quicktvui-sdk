@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <item type="id" name="focus_frame_cover"/>-->
+<!--    <item type="id" name="focus_frame_frame"/>-->
+<!--    <item type="id" name="focus_frame_shadow"/>-->
+<!--    <item type="id" name="focus_frame_higilight"/>-->
+<!--    <item type="id" name="focus_frame_bottombar"/>-->
+<!--    <item type="id" name="focus_title"/>-->
+<!--    <item type="id" name="focus_subtitle"/>-->
+    <item type="id" name="tag_focus_scale_animation"/>
+<!--    <item type="id" name="tv_root_view"/>-->
+</resources>

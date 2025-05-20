@@ -1,0 +1,44 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.kezong.fat-aar'
+
+android {
+    compileSdk sdk_compileSdk
+
+    defaultConfig {
+        minSdk sdk_minSdk
+        targetSdk sdk_targetSdk
+
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation findHippyDependencies()
+    implementation libs.utils
+    implementation libs.glide
+    implementation libs.android.recyclerview
+    compileOnly project(path: ':base:sdk-base')
+    compileOnly project(path: ':base:ui')
+
+    if(__maven_mode__) {
+        embed project(path: ':support:ui:viewpager-aar')
+    }else {
+        implementation project(path: ':support:ui:viewpager-aar')
+    }
+
+    compileOnly project(path: ':plugin:annotations')
+    annotationProcessor project(path: ':plugin:compiler')
+}

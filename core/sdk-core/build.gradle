@@ -1,0 +1,82 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.kezong.fat-aar'
+
+android {
+    compileSdk sdk_compileSdk
+
+    defaultConfig {
+        minSdk sdk_minSdk
+        targetSdk sdk_targetSdk
+
+        buildConfigField('String', 'QUICKTVUI_SDK_VERSION', "\"0.2.0\"")
+
+        consumerProguardFiles "consumer-rules.pro"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets {
+        main {
+            if (!__is_debug_mode__.toBoolean()) {
+                jniLibs.srcDirs = ['libs']
+            }
+        }
+    }
+
+}
+
+dependencies {
+
+    implementation libs.android.appcompat
+    implementation libs.android.recyclerview
+    implementation libs.android.media.compat
+
+    implementation libs.android.room.runtime
+    annotationProcessor libs.android.room.compiler
+
+    implementation libs.gson
+    api libs.utils
+    api libs.bolts
+    api libs.runtime.api
+
+    api findHippyDependencies()
+
+    def sub_modules = []
+    def filter = ['.gradle', 'build', 'src']
+    new File(project.rootDir, "support").listFiles().findAll {
+        it.isDirectory() && !filter.contains(it.name) && new File(it, 'build.gradle').exists()
+    }.each { file ->
+        sub_modules.add(":support:${file.getName()}")
+    }
+
+    if (__maven_mode__) {
+        compileOnly project(path: ':base:sdk-base')
+        compileOnly project(path: ':base:ui')
+        embed project(path: ':base:sdk-base')
+//        embed project(path: ':base:ui')
+        sub_modules.each {
+            println "EMBEDD $it"
+            compileOnly project(path: it)
+            embed project(path: it)
+        }
+    } else {
+        api project(path: ':base:sdk-base')
+        api project(path: ':base:ui')
+        sub_modules.each {
+            api project(path: it)
+        }
+    }
+
+    compileOnly project(path: ':plugin:annotations')
+    annotationProcessor project(path: ':plugin:compiler')
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ESKitAppStartWithImageBackground" parent="ESKitDarkTheme">
+        <item name="android:windowBackground">@drawable/eskit_pic_default_app_start_bg</item>
+        <item name="android:windowSplashScreenBackground">@color/color_es_default_black_bg</item>
+    </style>
+
+    <style name="ESKitAppStartWithColorBackground" parent="ESKitDarkTheme">
+        <item name="android:windowBackground">@color/color_es_default_black_bg</item>
+        <item name="android:windowSplashScreenBackground">@color/color_es_default_black_bg</item>
+    </style>
+
+</resources>

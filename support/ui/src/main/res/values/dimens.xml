@@ -1,0 +1,145 @@
+<resources>
+    <!--forum_markdownview_heart -->
+    <dimen name="heart_anim_bezier_x_rand">40.0dp</dimen>
+    <dimen name="heart_anim_init_x">50.0dp</dimen>
+    <dimen name="heart_anim_init_y">25.0dp</dimen>
+    <dimen name="heart_anim_length">100.0dp</dimen>
+    <dimen name="heart_anim_length_rand">150.0dp</dimen>
+    <dimen name="heart_anim_x_point_factor">30.0dp</dimen>
+    <dimen name="heart_size_height">27.3dp</dimen>
+    <dimen name="heart_size_width">32.5dp</dimen>
+
+    <!-- this is tips dimens -->
+    <dimen name="tips_x">30dp</dimen>
+    <dimen name="tips_y">30dp</dimen>
+    <dimen name="dp_2">2dp</dimen>
+    <dimen name="dp_60">60dp</dimen>
+    <dimen name="dp_30">30dp</dimen>
+    <dimen name="sp_12">12dp</dimen>
+    <dimen name="sp_13">13dp</dimen>
+    <dimen name="dp_6">6dp</dimen>
+    <dimen name="dp_4">4dp</dimen>
+    <dimen name="dp_8">8dp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="dp_16">16dp</dimen>
+    <dimen name="sp_16">16dp</dimen>
+    <dimen name="sp_20">20dp</dimen>
+    <dimen name="dp_12">12dp</dimen>
+    <dimen name="dp_50">50dp</dimen>
+
+    <!--activity_details -->
+    <dimen name="activity_details_move_screen">100dp</dimen>
+
+    <!-- acitivity_my.xml -->
+    <dimen name="dp_80">80dp</dimen>
+    <dimen name="dp_45">45dp</dimen>
+
+    <dimen name="sp_14">14dp</dimen>
+    <dimen name="sp_15">15dp</dimen>
+
+    <!-- activity_my_order_item.xml -->
+    <dimen name="dp_40">40dp</dimen>
+    <dimen name="dp_200">200dp</dimen>
+    <!-- activity_my_message.xml -->
+    <dimen name="sp_18">18dp</dimen>
+    <dimen name="sp_24">24dp</dimen>
+    <dimen name="dp_180">180dp</dimen>
+    <dimen name="dp_15">15dp</dimen>
+
+
+    <dimen name="quit_dialog_width">364dp</dimen>
+    <dimen name="quit_dialog_height">221dp</dimen>
+    <dimen name="quit_title_margintop">56dp</dimen>
+    <dimen name="quit_line_margintop">39dp</dimen>
+    <dimen name="quit_title_textsize">18dp</dimen>
+    <dimen name="quit_view_height">1dp</dimen>
+    <dimen name="quit_view_width">270dp</dimen>
+    <dimen name="quit_view_marginleft">13dp</dimen>
+    <dimen name="quit_btn_width">130dp</dimen>
+    <dimen name="quit_btn_height">44dp</dimen>
+    <dimen name="quit_btn_margin">20dp</dimen>
+
+    <dimen name="start_img_width">310dp</dimen>
+    <dimen name="start_img_height">110dp</dimen>
+    <dimen name="starttip_size">23dp</dimen>
+    <dimen name="start_version_marginbottom">30dp</dimen>
+    <dimen name="start_version_marginright">50dp</dimen>
+    <dimen name="start_version_size">18dp</dimen>
+    <dimen name="start_real_height">50dp</dimen>
+    <dimen name="start_real_margin">30dp</dimen>
+    <dimen name="start_line_width">90dp</dimen>
+    <dimen name="start_line_height">2dp</dimen>
+    <dimen name="star_tip_margin">20dp</dimen>
+
+    <!-- net_tips_view.xml -->
+    <dimen name="net_tipsview_width">300dp</dimen>
+    <dimen name="net_tipsview_height">140dp</dimen>
+    <dimen name="net_text_size">18dp</dimen>
+    <dimen name="net_textbo_margintop">15dp</dimen>
+    <dimen name="net_textbo_18sp">15dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+    <dimen name="dp_24">24dp</dimen>
+
+
+    <!-- activity_homepage_two -->
+    <dimen name="activity_homepage_two_item_spacing_13dp">10dp</dimen>
+
+    <!--homepage_two_recyleview_item-->
+    <dimen name="homepage_two_item_text_coordinate_10">-11px</dimen>
+    <dimen name="homepage_two_item_text_coordinate_44">44px</dimen>
+    <dimen name="homepage_two_item_0.8dp">0.8dp</dimen>
+    <dimen name="homepage_two_item_10dp">10dp</dimen>
+    <dimen name="homepage_two_item_50dp">50dp</dimen>
+
+    <!--update_system_dialog-->
+    <dimen name="update_system_dialog_14sp">14dp</dimen>
+    <dimen name="update_system_dialog_18sp">18dp</dimen>
+    <dimen name="update_system_dialog_23sp">23dp</dimen>
+    <dimen name="update_system_dialog_2dp">2dp</dimen>
+    <dimen name="update_system_dialog_5dp">5dp</dimen>
+    <dimen name="update_system_dialog_10dp">10dp</dimen>
+    <dimen name="update_system_dialog_12dp">12dp</dimen>
+    <dimen name="update_system_dialog_15dp">15dp</dimen>
+    <dimen name="update_system_dialog_20dp">25dp</dimen>
+    <dimen name="update_system_dialog_40dp">40dp</dimen>
+    <dimen name="update_system_dialog_150dp">220dp</dimen>
+    <dimen name="update_system_dialog_280dp">280dp</dimen>
+    <dimen name="update_system_dialog_350dp">380dp</dimen>
+    <dimen name="update_system_dialog_400dp">400dp</dimen>
+
+    <!--activity_update_system -->
+
+
+    <!--activity_hit_show_item.xml-->
+    <!--activity_hit_show_ranking_item.xml-->
+
+    <dimen name="home_page_viewpager_marginright">30dp</dimen>
+
+    <dimen name="list_user_avatar_width">35dp</dimen>
+    <dimen name="list_user_remove_iv_width">29dp</dimen>
+    <dimen name="list_user_remove_iv_height">29dp</dimen>
+    <dimen name="list_user_remove_ll_width">112dp</dimen>
+    <dimen name="list_user_add_width">45dp</dimen>
+    <dimen name="list_user_add_height">45dp</dimen>
+    <dimen name="userlist_item_width">346dp</dimen>
+    <dimen name="userlist_item_height">98dp</dimen>
+    <dimen name="list_user_sn_marginleft">13dp</dimen>
+    <dimen name="list_user_avatar_ll_paddingleft">50dp</dimen>
+    <dimen name="list_user_divider_width">1dp</dimen>
+    <dimen name="list_user_divider_height">1dp</dimen>
+    <dimen name="screennname_tv_width">150dp</dimen>
+    <dimen name="user_list_screennname_tv_width">180dp</dimen>
+
+    <dimen name="item_tv_station_program_width">128dp</dimen>
+    <dimen name="tv_station_program_item_height">270dp</dimen>
+    <dimen name="head_video_view_width">424dp</dimen>
+    <dimen name="head_video_view_height">240dp</dimen>
+
+    <dimen name="waterfall_padding_horizontal">44dp</dimen>
+    <dimen name="dp_132">132dp</dimen>
+    <dimen name="dp_27">27dp</dimen>
+
+    <integer name="flip_anim_length">1000</integer>
+    <integer name="flip_anim_half_length">500</integer>
+
+</resources>

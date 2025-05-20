@@ -1,0 +1,87 @@
+[versions]
+androidPluginVersion = '7.1.3'
+kotlinVersion = '1.8.20'
+
+# Hippy
+hippyVersion = '0.2.0'
+
+# SDK
+coreVersion='2.9.6.1'
+pluginBaseVersion='1.0.0'
+pluginCompilerVersion='1.0.0'
+
+# AndroidX
+multidexVersionX = '2.0.1'
+appcompatVersionX = '1.6.1'
+lifeCycleVersionX = '2.5.1'
+roomVersionX = '2.4.3'
+
+# Support
+multidexVersion = '1.0.3'
+appcompatVersion = '28.0.0'
+roomVersion = '1.1.1'
+
+retrofitVersion = '2.11.0'
+okhttpLogVersion = '4.12.0'
+
+gsonVersion = '2.7'
+jbAnnotationVersion = '13.0'
+
+boltsVersion = '1.0.2'
+boostVersion = '1.0.1'
+fatAarVersion = '1.3.8'
+glideVersion = '4.9.0'
+
+exoplayerVersion = '2.19.1'
+
+
+[libraries]
+#SDK
+sdk-core = {group = 'com.quicktvui', name = 'sdk', version.ref = 'coreVersion'}
+
+# AndroidX
+androidx-multidex = {group = 'androidx.multidex', name = 'multidex', version.ref = 'multidexVersionX'}
+androidx-appcompat = {group = 'androidx.appcompat', name = 'appcompat', version.ref = 'appcompatVersionX'}
+androidx-lifecycle-runtime-ktx = {group = 'androidx.lifecycle', name = 'lifecycle-runtime-ktx', version.ref = 'lifeCycleVersionX'}
+androidx-lifecycle-livedata-ktx = {group = 'androidx.lifecycle', name = 'lifecycle-livedata-ktx', version.ref = 'lifeCycleVersionX'}
+androidx-lifecycle-viewmodel-ktx = {group = 'androidx.lifecycle', name = 'lifecycle-viewmodel-ktx', version.ref = 'lifeCycleVersionX'}
+androidx-room-runtime = {group = 'androidx.room', name = 'room-runtime', version.ref = 'roomVersionX'}
+androidx-room-compiler = {group = 'androidx.room', name = 'room-compiler', version.ref = 'roomVersionX'}
+androidx-room-ktx = {group = 'androidx.room', name = 'room-ktx', version.ref = 'roomVersionX'}
+# Support
+android-multidex = {group = 'com.android.support', name = 'multidex', version.ref = 'multidexVersion'}
+android-appcompat = {group = 'com.android.support', name = 'appcompat-v7', version.ref = 'appcompatVersion'}
+android-recyclerview = {group = 'com.android.support', name = 'recyclerview-v7', version.ref = 'appcompatVersion'}
+android-compat = {group = 'com.android.support', name = 'support-compat', version.ref = 'appcompatVersion'}
+android-core-ui = {group = 'com.android.support', name = 'support-core-ui', version.ref = 'appcompatVersion'}
+android-constraintlayout = {group = 'com.android.support.constraint', name = 'constraint-layout', version = '2.0.4'}
+android-interpolator = {group = 'com.android.support', name = 'interpolator', version.ref = 'appcompatVersion'}
+android-exifinterface = {group = 'com.android.support', name = 'exifinterface', version.ref = 'appcompatVersion'}
+android-room-runtime = {group = 'android.arch.persistence.room', name = 'runtime', version.ref = 'roomVersion'}
+android-room-compiler = {group = 'android.arch.persistence.room', name = 'compiler', version.ref = 'roomVersion'}
+android-media-compat = {group = 'com.android.support', name = 'support-media-compat', version.ref = 'appcompatVersion'}
+
+retrofit = {group = 'com.squareup.retrofit2', name = 'retrofit', version.ref = 'retrofitVersion'}
+retrofit-coverter-gson = {group = 'com.squareup.retrofit2', name = 'converter-gson', version.ref = 'retrofitVersion'}
+okhttp = {group = 'com.squareup.okhttp3', name = 'okhttp', version.ref = 'okhttpLogVersion'}
+retrofit-logging = {group = 'com.squareup.okhttp3', name = 'logging-interceptor', version.ref = 'okhttpLogVersion'}
+runtime-api = {group = 'com.extscreen.runtime', name = 'runtime-api', version = '2.2-beta20'}
+
+zxing = {group = 'com.google.zxing', name = 'core', version = '3.3.2'}
+gson = {group = 'com.google.code.gson', name = 'gson', version.ref = 'gsonVersion'}
+jetbrains-annotations = {group = 'org.jetbrains', name = 'annotations', version.ref = 'jbAnnotationVersion'}
+
+utils = {group = 'com.sunrain', name = 'utils', version = '1.3.8'}
+bolts = {group = 'com.sunrain', name = 'bolts', version.ref = 'boltsVersion'}
+bytedance-multidex = {group = 'com.bytedance.boost_multidex', name = 'boost_multidex', version.ref = 'boostVersion'}
+
+fat-aar = { module = 'com.github.kezong:fat-aar', version.ref = 'fatAarVersion' }
+
+glide = { module = 'com.github.bumptech.glide:glide', version.ref = 'glideVersion' }
+glide-compiler = { module = 'com.github.bumptech.glide:compiler', version.ref = 'glideVersion' }
+exoplayer = { module = 'com.google.android.exoplayer:exoplayer', version.ref = 'exoplayerVersion' }
+
+[plugins]
+android-application = { id = 'com.android.application', version.ref = "androidPluginVersion" }
+android-library = { id = 'com.android.library', version.ref = 'androidPluginVersion' }
+kotlin-android = { id = 'org.jetbrains.kotlin.android', version.ref = 'kotlinVersion' }

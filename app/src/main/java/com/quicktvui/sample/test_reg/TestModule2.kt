@@ -1,0 +1,1 @@
+package com.quicktvui.sample.test_regimport android.content.Contextimport com.quicktvui.sdk.annotations.ESKitAutoRegisterimport com.quicktvui.sdk.base.module.IEsModule/** * <br> * * <br> */@ESKitAutoRegisterclass TestModule2 : IEsModule {    override fun init(context: Context?) {    }    override fun destroy() {    }}

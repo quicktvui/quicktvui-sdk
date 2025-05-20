@@ -1,0 +1,58 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'com.kezong.fat-aar'
+
+android {
+    compileSdk sdk_compileSdk
+
+    defaultConfig {
+        minSdk sdk_minSdk
+        targetSdk sdk_targetSdk
+
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    compileOnly libs.utils
+    implementation findHippyDependencies()
+    implementation libs.android.recyclerview
+    implementation libs.glide
+    api 'jp.wasabeef:glide-transformations:4.0.0'
+
+    compileOnly project(path: ':base:sdk-base')
+    compileOnly project(path: ':base:ui')
+
+    def sub_modules = []
+    def filter = ['.gradle','build','src']
+    project.projectDir.listFiles().findAll {
+        it.isDirectory() && !filter.contains(it.name) && new File(it, 'build.gradle').exists()
+    }.each {file->
+        sub_modules.add(":support:ui:${file.getName()}")
+    }
+
+    if(__maven_mode__) {
+        sub_modules.each {
+            embed project(path: it)
+        }
+    } else {
+        sub_modules.each {
+            api project(path: it)
+        }
+    }
+
+    //annotation processor 模块
+    compileOnly project(path: ':plugin:annotations')
+    annotationProcessor project(path: ':plugin:compiler')
+}

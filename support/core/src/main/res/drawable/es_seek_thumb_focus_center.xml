@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval"
+    android:useLevel="true">
+    <size
+        android:width="@dimen/es_seek_thumb_oval_size"
+        android:height="@dimen/es_seek_thumb_oval_size" />
+    <solid android:color="@android:color/white" />
+
+</shape>

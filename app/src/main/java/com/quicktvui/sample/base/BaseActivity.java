@@ -1,0 +1,1 @@
+package com.quicktvui.sample.base;import android.support.v7.app.AppCompatActivity;/** * <br> * * <br> */public class BaseActivity extends AppCompatActivity {}

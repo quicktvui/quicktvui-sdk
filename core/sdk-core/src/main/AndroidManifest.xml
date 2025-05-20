@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.quicktvui.sdk.core">
+
+<!--    <permission android:name="${applicationId}.es.permission.QUERY" android:protectionLevel="normal"/>-->
+<!--    <uses-permission android:name="${applicationId}.es.permission.QUERY"/>-->
+
+    <application>
+
+        <activity
+            android:name=".ui.BrowserProxyActivity"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:theme="@style/ESKitTransparent">
+            <intent-filter>
+                <action android:name="${applicationId}.ES_ACTION_LAUNCH" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.APP_BROWSER" />
+
+                <!-- ！！！！注意EsNativeModule.getSupportSchemes方法！！！！-->
+                <!--                <data-->
+                <!--                    android:host="action"-->
+                <!--                    android:pathPrefix="/start"-->
+                <!--                    android:scheme="esapp" />-->
+                <data android:scheme="esapp" />
+                <!-- ！！！！注意EsNativeModule.getSupportSchemes方法！！！！-->
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.APP_BROWSER" />
+
+                <data android:scheme="quicktv" />
+
+            </intent-filter>
+
+        </activity>
+
+        <!--Standard入口-->
+
+        <activity
+            android:name=".ui.BrowserStandardActivity"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="landscape"
+            android:theme="@style/ESKitAppStartWithImageBackground" />
+
+        <!--特殊入口 透明主题 仅支持一种启动方式-->
+
+        <activity
+            android:name=".ui.BrowserStandardTransparentActivity"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:theme="@style/ESKitTransparent" />
+
+        <!--特殊入口 带主题-->
+
+        <activity
+            android:name=".ui.normal.single.task.BrowserSingleTaskActivity0"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/ESKitAppStartWithImageBackground" />
+        <activity
+            android:name=".ui.normal.single.task.BrowserSingleTaskActivity1"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/ESKitAppStartWithImageBackground" />
+        <activity
+            android:name=".ui.normal.single.task.BrowserSingleTaskActivity2"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/ESKitAppStartWithImageBackground" />
+        <activity
+            android:name=".ui.normal.single.task.BrowserSingleTaskActivity3"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/ESKitAppStartWithImageBackground" />
+        <activity
+            android:name=".ui.normal.single.task.BrowserSingleTaskActivity4"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/ESKitAppStartWithImageBackground" />
+
+        <activity
+            android:name=".ui.normal.single.top.BrowserSingleTopActivity0"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/ESKitAppStartWithImageBackground" />
+        <activity
+            android:name=".ui.normal.single.top.BrowserSingleTopActivity1"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/ESKitAppStartWithImageBackground" />
+        <activity
+            android:name=".ui.normal.single.top.BrowserSingleTopActivity2"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/ESKitAppStartWithImageBackground" />
+        <activity
+            android:name=".ui.normal.single.top.BrowserSingleTopActivity3"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/ESKitAppStartWithImageBackground" />
+        <activity
+            android:name=".ui.normal.single.top.BrowserSingleTopActivity4"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/ESKitAppStartWithImageBackground" />
+
+        <activity
+            android:name=".ui.normal.single.instance.BrowserSingleInstanceActivity0"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape"
+            android:theme="@style/ESKitAppStartWithImageBackground" />
+        <activity
+            android:name=".ui.normal.single.instance.BrowserSingleInstanceActivity1"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape"
+            android:theme="@style/ESKitAppStartWithImageBackground" />
+        <activity
+            android:name=".ui.normal.single.instance.BrowserSingleInstanceActivity2"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape"
+            android:theme="@style/ESKitAppStartWithImageBackground" />
+        <activity
+            android:name=".ui.normal.single.instance.BrowserSingleInstanceActivity3"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape"
+            android:theme="@style/ESKitAppStartWithImageBackground" />
+        <activity
+            android:name=".ui.normal.single.instance.BrowserSingleInstanceActivity4"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape"
+            android:theme="@style/ESKitAppStartWithImageBackground" />
+
+        <!--特殊入口 不带主题-->
+
+        <activity
+            android:name=".ui.BrowserStandardNoThemeActivity"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="landscape"
+            android:theme="@style/ESKitAppStartWithColorBackground" />
+
+        <activity
+            android:name=".ui.notheme.single.task.BrowserSingleTaskActivity0"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/ESKitAppStartWithColorBackground" />
+        <activity
+            android:name=".ui.notheme.single.task.BrowserSingleTaskActivity1"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/ESKitAppStartWithColorBackground" />
+        <activity
+            android:name=".ui.notheme.single.task.BrowserSingleTaskActivity2"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/ESKitAppStartWithColorBackground" />
+        <activity
+            android:name=".ui.notheme.single.task.BrowserSingleTaskActivity3"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/ESKitAppStartWithColorBackground" />
+        <activity
+            android:name=".ui.notheme.single.task.BrowserSingleTaskActivity4"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/ESKitAppStartWithColorBackground" />
+
+        <activity
+            android:name=".ui.notheme.single.top.BrowserSingleTopActivity0"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/ESKitAppStartWithColorBackground" />
+        <activity
+            android:name=".ui.notheme.single.top.BrowserSingleTopActivity1"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/ESKitAppStartWithColorBackground" />
+        <activity
+            android:name=".ui.notheme.single.top.BrowserSingleTopActivity2"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/ESKitAppStartWithColorBackground" />
+        <activity
+            android:name=".ui.notheme.single.top.BrowserSingleTopActivity3"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/ESKitAppStartWithColorBackground" />
+        <activity
+            android:name=".ui.notheme.single.top.BrowserSingleTopActivity4"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/ESKitAppStartWithColorBackground" />
+
+        <activity
+            android:name=".ui.notheme.single.instance.BrowserSingleInstanceActivity0"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape"
+            android:theme="@style/ESKitAppStartWithColorBackground" />
+        <activity
+            android:name=".ui.notheme.single.instance.BrowserSingleInstanceActivity1"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape"
+            android:theme="@style/ESKitAppStartWithColorBackground" />
+        <activity
+            android:name=".ui.notheme.single.instance.BrowserSingleInstanceActivity2"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape"
+            android:theme="@style/ESKitAppStartWithColorBackground" />
+        <activity
+            android:name=".ui.notheme.single.instance.BrowserSingleInstanceActivity3"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape"
+            android:theme="@style/ESKitAppStartWithColorBackground" />
+        <activity
+            android:name=".ui.notheme.single.instance.BrowserSingleInstanceActivity4"
+            android:configChanges="screenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape"
+            android:theme="@style/ESKitAppStartWithColorBackground" />
+
+        <!--android:permission="${applicationId}.es.permission.QUERY"-->
+        <provider
+            android:name=".internal.EsContentProvider"
+            android:authorities="${applicationId}.content.provider.EsContentProvider"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name="android.support.v4.media.session.MediaButtonReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".mediasession.EsMediaPlayerService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.media.browse.MediaBrowserService" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+</manifest>

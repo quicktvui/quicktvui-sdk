@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-->属性命名以小写字母命名，不同单词之间使用_相隔<-->
+
+    <declare-styleable name="SystemDialogBtnView">
+        <attr name="fui_focus" format="string" />
+        <attr name="fui_normal" format="string" />
+        <attr name="fui_content" format="string" />
+        <attr name="fui_lastfocus" format="string" />
+        <attr name="fui_subcontent" format="string" />
+        <attr name="fui_titlecontent" format="string" />
+        <attr name="fui_focus_width" format="dimension" />
+        <attr name="fui_focus_height" format="dimension" />
+        <attr name="fui_normal_width" format="dimension" />
+        <attr name="fui_normal_height" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="FFocusFrameView">
+
+        <attr name="tag_hightlight" format="string" />
+        <attr name="tag_focusbar" format="string" />
+        <attr name="tag_cover" format="string" />
+        <attr name="tag_shadow" format="string" />
+        <attr name="enable_focus_scale" format="boolean" />
+        <attr name="tag_frame" format="string" />
+        <attr name="tag_shadow_default" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="FFocusDropBarView">
+        <attr name="tag_content" />
+    </declare-styleable>
+
+    <declare-styleable name="FFocusBarView">
+        <attr name="tag_content" />
+    </declare-styleable>
+
+    <declare-styleable name="FFocusTitleBarView">
+        <attr name="subtitle_visible" format="boolean" />
+    </declare-styleable>
+
+    <attr name="extra_width" format="dimension" />
+    <attr name="extra_height" format="dimension" />
+
+    <attr name="layout_offset_x" format="dimension" />
+    <attr name="layout_offset_y" format="dimension" />
+
+    <declare-styleable name="FExtraSpaceView">
+        <attr name="extra_width" />
+        <attr name="extra_height" />
+        <attr name="layout_offset_x" />
+        <attr name="layout_offset_y" />
+    </declare-styleable>
+
+    <declare-styleable name="FExtraSpaceLayout">
+        <attr name="extra_width" />
+        <attr name="extra_height" />
+    </declare-styleable>
+
+    <declare-styleable name="FNinePatchShadow">
+        <attr name="shadow_image" format="reference" />
+        <attr name="append_width" format="dimension" />
+        <attr name="append_height" format="dimension" />
+        <attr name="shadow_left" format="dimension" />
+        <attr name="shadow_right" format="dimension" />
+        <attr name="shadow_top" format="dimension" />
+        <attr name="shadow_bottom" format="dimension" />
+    </declare-styleable>
+
+
+    <attr name="value_focus_scale" format="float" />
+    <attr name="value_focus_scaleX" format="float" />
+    <attr name="value_focus_scaleY" format="float" />
+    <attr name="enable_dispatch_draw" format="boolean" />
+    <attr name="duration_focus_scale" format="integer" />
+    <attr name="enable_dispatch_keyevent" format="boolean" />
+    <attr name="addtion_scroll_offset" format="dimension" />
+
+    <!-->floatFocus<-->
+    <attr name="float_focus_focused_alpha" format="float" />
+    <attr name="float_focus_marginLeft" format="dimension" />
+    <attr name="float_focus_marginTop" format="dimension" />
+    <attr name="float_focus_marginBottom" format="dimension" />
+    <attr name="float_focus_marginRight" format="dimension" />
+    <attr name="float_focus_reappear_interval" format="integer" />
+    <attr name="focus_scroll_offset" format="dimension"></attr>
+
+    <attr name="tag_content" format="string" />
+
+
+
+
+    <declare-styleable name="SingleLineRecyclerView">
+        <attr name="focus_scroll_offset"/>
+        <attr name="disable_focus_intercept" format="boolean"/>
+        <attr name="enable_focus_memory" format="boolean"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="TVRootView">
+        <attr name="float_focus_type">
+            <enum name="Default" value="0"></enum>
+            <enum name="None" value="1"></enum>
+            <enum name="Custom" value="2"></enum>
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="TVFrameLayout">
+        <attr name="value_focus_scale" />
+        <attr name="value_focus_scaleX" />
+        <attr name="value_focus_scaleY" />
+        <attr name="duration_focus_scale" />
+        <attr name="float_focus_focused_alpha" />
+        <attr name="float_focus_marginLeft" />
+        <attr name="float_focus_marginTop" />
+        <attr name="float_focus_marginBottom" />
+        <attr name="float_focus_marginRight" />
+    </declare-styleable>
+
+    <declare-styleable name="TVLinearLayout">
+        <attr name="value_focus_scale" />
+        <attr name="value_focus_scaleX" />
+        <attr name="value_focus_scaleY" />
+        <attr name="duration_focus_scale" />
+        <attr name="float_focus_focused_alpha" />
+        <attr name="float_focus_marginLeft" />
+        <attr name="float_focus_marginTop" />
+        <attr name="float_focus_marginBottom" />
+        <attr name="float_focus_marginRight" />
+    </declare-styleable>
+
+    <declare-styleable name="TVRelativeLayout">
+        <attr name="value_focus_scale" />
+        <attr name="value_focus_scaleX" />
+        <attr name="value_focus_scaleY" />
+        <attr name="duration_focus_scale" />
+        <attr name="float_focus_focused_alpha" />
+        <attr name="float_focus_marginLeft" />
+        <attr name="float_focus_marginTop" />
+        <attr name="float_focus_marginBottom" />
+        <attr name="float_focus_marginRight" />
+    </declare-styleable>
+
+    <declare-styleable name="TVImageView">
+        <attr name="value_focus_scale" />
+        <attr name="value_focus_scaleX" />
+        <attr name="value_focus_scaleY" />
+        <attr name="duration_focus_scale" />
+        <attr name="float_focus_focused_alpha" />
+        <attr name="float_focus_marginLeft" />
+        <attr name="float_focus_marginTop" />
+        <attr name="float_focus_marginBottom" />
+        <attr name="float_focus_marginRight" />
+    </declare-styleable>
+
+    <declare-styleable name="TVTextView">
+        <attr name="value_focus_scale" />
+        <attr name="value_focus_scaleX" />
+        <attr name="value_focus_scaleY" />
+        <attr name="duration_focus_scale" />
+        <attr name="float_focus_focused_alpha" />
+        <attr name="float_focus_marginLeft" />
+        <attr name="float_focus_marginTop" />
+        <attr name="float_focus_marginBottom" />
+        <attr name="float_focus_marginRight" />
+    </declare-styleable>
+
+    <declare-styleable name="FCardView">
+        <attr name="value_focus_scale" />
+        <attr name="value_focus_scaleX" />
+        <attr name="value_focus_scaleY" />
+        <attr name="duration_focus_scale" />
+        <attr name="float_focus_focused_alpha" />
+        <attr name="float_focus_marginLeft" />
+        <attr name="float_focus_marginTop" />
+        <attr name="float_focus_marginBottom" />
+        <attr name="float_focus_marginRight" />
+    </declare-styleable>
+
+    <declare-styleable name="TVRecyclerView">
+        <attr name="enable_dispatch_draw" />
+        <attr name="enable_dispatch_keyevent" />
+        <attr name="enable_shake_list_end" format="boolean" />
+
+        <!--<attr name="shake_orientation" >-->
+            <!--<enum name="horizontal" value="1"/>-->
+            <!--<enum name="vertical" value="0"/>-->
+        <!--</attr>-->
+        <attr name="clipMarginHorizontal" format="dimension"/>
+        <attr name="clipMarginVertical" format="dimension"/>
+        <attr name="clipMargin" format="dimension"/>
+    </declare-styleable>
+
+    <attr name="item_span_normal" format="dimension" />
+    <attr name="item_span_selected" format="dimension" />
+
+
+    <declare-styleable name="FExtendGallery">
+        <attr name="item_span_idle" format="dimension" />
+    </declare-styleable>
+
+    <!--<declare-styleable name="FFloatFocusGallery">-->
+    <!--<attr name="item_span_normal" />-->
+    <!--<attr name="item_span_selected"/>-->
+    <!--<attr name="orientation"/>-->
+    <!--</declare-styleable>-->
+
+    <declare-styleable name="FVerticalViewPager">
+        <attr name="float_focus_reappear_interval" />
+    </declare-styleable>
+
+
+    <declare-styleable name="FWheelRecyclerView">
+        <attr name="item_height" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="FPagingGridView">
+        <attr name="columnCount" format="integer" />
+        <attr name="rowCount" format="integer" />
+        <attr name="preloadRowNum" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="FBaselineFocusRowsRecycleView">
+        <attr name="baselineMargin" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="FLoading">
+        <attr name="black_alpha" format="float" />
+        <attr name="progress_diameter" format="dimension" />
+        <attr name="progress_stroke_width" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="FRoundLoadingView">
+        <attr name="progress_color" format="color"></attr>
+        <attr name="stroke" format="dimension"></attr>
+    </declare-styleable>
+
+    <attr name="enable_black_background" format="boolean" />
+    <declare-styleable name="FSimpleBlueFrame">
+        <attr name="enable_black_background" />
+    </declare-styleable>
+
+    <declare-styleable name="FColorBorderFrame">
+        <attr name="enable_black_background" />
+        <attr name="border_color" format="color" />
+        <attr name="inner_black_frame_width" format="dimension" />
+    </declare-styleable>
+
+    <!--双波浪WaveView的自定义属性-->
+    <!--属性说明:
+                fwave_background_color:        整个view的背景颜色
+                fwave_front_acolor:       最上层浪的初始浪尖带alpha的颜色值
+                fwave_back_acolor:        下层浪的初始浪尖带alpha的颜色值
+                fwave_front_acolor_after: 最上层浪在整个view的bottom位置的带alpha的颜色值
+                fwave_back_acolor_after:  下层浪在整个view的bottom位置的带alpha的颜色值
+                fwave_front_alpha:        上层浪画笔的alpha值
+                fwave_back_alpha:         下层浪画笔的alpha值
+                fwave_weight:             两个浪在屏幕的位置,越小位置越高 0.0-1.0
+                -->
+    <declare-styleable name="FWaveView">
+        <attr name="fwave_background_color" format="color" />
+        <attr name="fwave_front_acolor" format="color" />
+        <attr name="fwave_back_acolor" format="color" />
+        <attr name="fwave_front_acolor_after" format="color" />
+        <attr name="fwave_back_acolor_after" format="color" />
+        <attr name="fwave_front_alpha" format="integer" />
+        <attr name="fwave_back_alpha" format="integer" />
+        <attr name="fwave_weight" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="FDataStateView">
+        <attr name="off_y" format="dimension" />
+        <attr name="data_state">
+            <enum name="no_net" value="0" />
+            <enum name="no_attention" value="1" />
+            <enum name="no_funs" value="2" />
+            <enum name="no_piandan" value="3" />
+            <enum name="no_song" value="4" />
+            <enum name="error" value="5" />r
+            <enum name="no_history" value="6" />
+            <enum name="no_collection" value="7" />
+            <enum name="no_data" value="8" />
+            <enum name="no_search" value="9" />
+            <enum name="no_message" value="10" />
+            <enum name="no_order" value="11" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="FMarqueeText">
+        <attr name="marquee_text_align">
+            <enum name="left" value="1" />
+            <enum name="center" value="0" />
+        </attr>
+        <attr name="scrollSpeed" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleDominateImageView">
+        <attr name="dominate_radius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundAngleImageView">
+        <attr name="round_radius" format="dimension" />
+    </declare-styleable>
+
+    
+    <declare-styleable name="FRippleImageView">
+        <attr name="space_time" format="integer" />
+        <attr name="ripple_width" format="dimension" />
+        <attr name="ripple_height" format="dimension" />
+    </declare-styleable>
+    
+    <declare-styleable name="FFocusFrameMoveView">
+        <attr name="focus_frame_pic" format="reference" /> <!-- 焦点框 -->
+        <attr name="focus_frame_shadow" format="reference" />
+        <attr name="focus_frame_item_height" format="dimension" /> <!-- item 高 -->
+        <attr name="focus_frame_item_width" format="dimension" /> <!-- item 宽 -->
+        <attr name="focus_frame_left_offset" format="dimension" /> <!-- 当前 view 焦点框左侧阴影长度 -->
+        <attr name="focus_frame_top_offset" format="dimension" /> <!-- 当前 view 焦点框上方阴影长度 -->
+        <attr name="focus_frame_top" format="dimension" /> <!-- 当前 view 距离顶部距离 -->
+        <attr name="focus_frame_left" format="dimension" /> <!-- 当前 view 距离左侧距离 -->
+        <attr name="focus_frame_move_duration" format="integer" /> <!-- 动画时间 -->
+        <attr name="focus_frame_shake_end" format="boolean" /> <!-- 底部弹动 -->
+        <attr name="focus_frame_contain_items" format="integer" />
+    </declare-styleable>
+
+
+    <attr name="borderRadius" format="dimension" />
+
+    <!--带边框的TextView属性-->
+    <declare-styleable name="FBorderTextView">
+        <attr name="text_border_width" format="dimension"/>
+        <attr name="text_border_radius" format="dimension"/>
+        <attr name="text_border_color" format="color"/>
+        <attr name="text_border_visible" format="boolean"/>
+    </declare-styleable>
+
+</resources>

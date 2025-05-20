@@ -1,0 +1,89 @@
+pluginManagement {
+    repositories {
+        mavenLocal()
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://nexus.extscreen.com/repository/maven-public/' }
+    }
+}
+enableFeaturePreview('VERSION_CATALOGS')
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenLocal()
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://nexus.extscreen.com/repository/maven-public/' }
+    }
+}
+
+include ':app'
+
+include ':base:sdk-base'
+include ':base:ui'
+
+include ':core:sdk-core'
+
+include ':plugin:annotations'
+include ':plugin:compiler'
+
+include ':support:core'
+include ':support:image-loader'
+
+include ':support:data-group'
+include ':support:data-shared'
+
+//region UI部分
+
+include ':support:ui:icon-view'
+include ':support:ui:image'
+include ':support:ui:item'
+include ':support:ui:leanback'
+include ':support:ui:playmarkview'
+include ':support:ui:recyclerview'
+include ':support:ui:recyclerview-sliding'
+include ':support:ui:render'
+include ':support:ui:viewpager'
+include ':support:ui:viewpager-aar'
+include ':support:ui:legacy'
+//endregion
+
+include ':support:audio-record'
+include ':support:border-drawable'
+include ':support:brightness' //亮度调节
+include ':support:canvas'
+include ':support:chart'
+include ':support:player-manager'
+include ':support:player-audio-android'
+include ':support:device-info'//设备信息库
+include ':support:download'
+include ':support:gif-view'
+include ':support:install-manager'//apk安装
+include ':support:log'
+include ':support:long-image'
+include ':support:lottie-view'//lottie动画库
+include ':support:network-speed'
+
+//region 播放器部分
+include ':support:ijk-base'
+include ':support:player-ijk'
+include ':support:player-audio-ijk'
+include ':support:small-player'
+include ':support:player-async'
+include ':support:player-audio-soundpool'
+//endregion
+
+include ':support:rippleview'
+include ':support:socket-io'
+include ':support:subtitle-converter'
+include ':support:swiper-view'
+include ':support:upload'
+include ':support:websocket'
+include ':support:webview'
+include ':support:x5webview'

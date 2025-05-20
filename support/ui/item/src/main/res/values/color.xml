@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_number_background">#3281fc</color>
+    <color name="color_actor_tag_back">#4a4c5a</color>
+    <color name="actor_bar_bg">#70ffffff</color>
+    <color name="color_multi_line_text_normal">#B2ffffff</color>
+    <color name="color_nulti_line_bg_focus">#C0A371</color>
+</resources>

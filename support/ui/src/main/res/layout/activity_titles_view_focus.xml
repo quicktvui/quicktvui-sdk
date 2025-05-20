@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/titleRootFocusView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:clipChildren="false">
+
+    <RelativeLayout
+        android:id="@+id/titleFocusView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:clipChildren="false"
+        android:layout_gravity="top">
+        <TextView
+            android:id="@+id/focusFloatTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dp_8"
+            android:paddingRight="@dimen/dp_8"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_13"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:background="@drawable/home_item_focus_shadow_bg" />
+        <LinearLayout
+            android:id="@+id/focusMainLView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/home_text_focus_bg"
+            android:layout_below="@id/focusFloatTitle">
+            <TextView
+                android:id="@+id/focusMainTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp_8"
+                android:paddingRight="@dimen/dp_8"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:includeFontPadding="false"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_15"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:background="@android:color/transparent"/>
+            <TextView
+                android:id="@+id/focusSubTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-6dp"
+                android:paddingLeft="@dimen/dp_8"
+                android:paddingRight="@dimen/dp_8"
+                android:paddingBottom="4dp"
+                android:textSize="@dimen/sp_12"
+                android:textColor="#99000000"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:background="@android:color/transparent"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

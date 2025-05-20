@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.quicktvui.support.ui.largelist.TextEpisodeItemHostView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/placeholder"
+    android:clipChildren="false"
+    android:focusable="true">
+
+    <LinearLayout
+        android:id="@+id/linearGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:duplicateParentState="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.quicktvui.support.ui.playmarkview.PlayMarkView
+            android:id="@+id/gif_img"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="8dp"
+            android:paddingTop="4dp"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/focus_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:duplicateParentState="true"
+            android:focusable="false"
+            android:gravity="center"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:tag="2000"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/corner"
+        android:layout_width="24dp"
+        android:layout_height="16dp"
+        android:layout_gravity="top|right"
+        android:gravity="center"
+        android:paddingLeft="3.5dp"
+        android:paddingRight="3.5dp"
+        android:paddingBottom="1dp"
+        android:textSize="10dp"
+        tools:ignore="SmallSp" />
+</com.quicktvui.support.ui.largelist.TextEpisodeItemHostView>

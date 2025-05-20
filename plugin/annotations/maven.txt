@@ -1,0 +1,4 @@
+
+GROUP_ID=com.quicktvui
+ARTIFACT_ID=plugin-annotations
+VERSION=0.2.0
